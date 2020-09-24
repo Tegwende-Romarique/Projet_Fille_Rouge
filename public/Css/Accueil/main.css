@@ -1,0 +1,62 @@
+
+.ms-slidebar .ms-slidebar-menu > li > a.collapsed::after {
+
+    content: '\f067';
+    font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+    transform: rotate(180deg);
+
+}
+
+
+.ms-slidebar .ms-slidebar-menu > li > a::after {
+
+    font-size: 1.2em;
+    float: right;
+    content: '\f068';
+    transition: all ease .3s;
+    font-family: Material-Design-Iconic-Font;
+      
+
+}
+
+
+
+
+.ms-slidebar .ms-slidebar-menu > li > a::after {
+
+  font-family: Material-Design-Iconic-Font;
+  font-size: 1.2em;
+  float: right;
+  content: '\f077';
+  transition: all 0.3s ease 0s;
+  
+
+}
+
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}

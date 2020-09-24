@@ -21,14 +21,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Les controllers des etablissements
+Route::get('formulaire-Etablissement', 'EtablissementController@create');
+Route::post('creer-Etablissement', 'EtablissementController@store');
+Route::get('afficher-Etablissement', 'EtablissementController@index');
+Route::get('supprimer-Etablissement', 'EtablissementController@destroy');
+Route::get('editer-Etablissement/{id}', 'EtablissementController@edit');
+Route::post('update-Etablissement/{id}', 'EtablissementController@update');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('index', 'IndexController@create');
-Route::get('liste', 'IndexController@liste');

@@ -1,0 +1,5 @@
+3\LDlJ0Vwy7qEvw9
+DB_DATABASE=id14879516_test	
+DB_USERNAME=id14879516_tegwende
+DB_PASSWORD=3\LDlJ0Vwy7qEvw9
+Mot de passe pour la connexio:77687319Tegwende@

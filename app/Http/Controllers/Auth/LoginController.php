@@ -37,4 +37,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function login(Request $request){
+        $input= $request->all();
+        $this->validate($request, [
+            'email' =>'required|email',
+            'password' =>'required',
+             
+        ]);
+
+        if(auth()->attempt(array('email'=>$input['email'], 'passwor'=>$input['password'])))
+        {
+            if(auth()->user()->statut == 1){
+                return redirect('/home');
+            } else{
+                return redirect('Etablissement/forme-etablissement');
+            }
+        }
+    }
 }
