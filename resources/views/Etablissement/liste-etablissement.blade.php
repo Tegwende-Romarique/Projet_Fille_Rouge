@@ -1,55 +1,54 @@
-@extends('layouts.include')
-@section('content')
-<div class="card card-primary">
+@extends('layouts.Accueil.liens')
+@extends('home')
+@section('dashboard')
+       <!-- <div class="material-background"></div>  -->
+        <div class="container container-full">
+          <!-- <div class="row"> -->
+            <section class="ms-component-section">
+              <div class="wrap-light">
+                <h1 class="section-title text-center">Liste des Etablissement</h1>
+                <!-- <p class="lead text-center">Just a few examples, the combinations are limitless.</p> -->
 
-<div class=""> <!-- script pour l'affichage du flash message ou message de confirmation    -->
-            @if(session()->get('success'))
-                <div class="alert alert-success alert-dismissible" role="alert">
-            {{ session()->get('success') }}  
-        </div>
-            @endif
-        </div>
-          
-                    <div class="card-header">
-                      <h3 class="card-title"><i class="fa fa-graduation-cap"></i> Card Title</h3>
+              <div class="row mt-4">
+
+                <div class="col-md-6">
+                    <div class="card card-warning-inverse">
+
+                      <div class="card-body overflow-hidden text-center">
+                         <span class="ms-icon ms-icon-circle ms-icon-xxlg mb-4 color-success"><i class="fa fa-graduation-cap"></i></span>
+                      <h3 class="color-light"><a href="{{ url('formulaire-Etablissement')}}"><i class="fa fa-plus-circle fa-4x"></i></a></h3>
+                       <h1>Ajouter Un Etablissement</h1>
+                      </div>
+
                     </div>
-                    <table class="table table-no-border table-striped">
-                      <thead>
-                        <tr>
-                          <th>Nom </th>
-                          <th>Email</th>
-                          <th>Telephone</th>
-                          <th>Modifier</th>
-                          <th>Supprimer</th>
-                        </tr>
-                      </thead>
-
-                      
-                      <tbody>
-                      @foreach($etablissements as $ecole)
-                        <tr>
-                          <td>{{$ecole->nom}}</td>
-                          <td>{{$ecole->email}}</td>
-                          <td>{{$ecole->telephone}}</td>
-                          <td>
-                          <a href="{{ url('editer-Etablissement', $ecole->id)}} " class="btn btn-raised color-white btn-warning"> <i class="fa fa-pencil"></i> Modifier</a>
-                          </td> 
-                          <td>
-                          <!-- <form action="{{ url('supprimer-Etablissement', $ecole->id) }}" method="post" style="display: inline-block">
-                            @csrf
-                            @method('DELETE') -->
-                          <a href="{{ url('supprimer-Etablissement?id=' .$ecole->id) }}" class="btn btn-raised color-white btn-danger"> <i class="fa fa-trash-o"></i>Supprimer</a>
-                          <!-- <button class="btn btn-danger btn-sm" type="submit">Delete</button> -->
-                          <!-- </form> -->
-                          </td> 
-                        </tr>
-                        @endforeach
-                      </tbody>
-                      
-                    </table>
                   </div>
+
+              @foreach ($etablissements as $etablissement)
+                  <div class="col-md-6">
+                    <div class="card card-royal-inverse">
+
+                      <div class="card-body overflow-hidden text-center">
+                         <span class="ms-icon ms-icon-circle ms-icon-xxlg mb-4 color-warning"><i class="fa fa-graduation-cap"></i></span>
+                        <h3 class="color-light">{{$etablissement->nom}}</h3>
+                       <p>Lieu: {{$etablissement->ville}}</p>
+                       <p>Type: {{$etablissement->type}}</p>
+                        <div class="btn-group btn-group-raised">
+                        <a href="{{ url('detaille-Etablissement?id='.$etablissement->id)}}" class="btn btn-success"><i class="fa fa-eye"></i></a>
+                          <a href="{{ url('supprimer-Etablissement?id='.$etablissement->id)}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                          <a href="{{ url('supprimer-Etablissement?id='.$etablissement->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                      </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  @endforeach
+               </div>
+               </div>
+            </section>
+          </div> <!-- ms-paper-content -->
+        </div> <!-- col-lg-9 -->
+
 @endsection
 
 
-                    
-                   
+

@@ -46,6 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        //Add Admin Guard
+        'SupperAdmin' => [
+            'driver'   => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -75,6 +81,12 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        //Add Admins Provider
+        'SupperAdmin' => [
+            'driver' => 'eloquent',
+            'model'  => App\SupperAdmin::class,
+        ],
     ],
 
     /*

@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#333">
     <title>PEN</title>
     <meta name="description" content="Material Style Theme">
+
     <link rel="shortcut icon" href="Imgages/favicon.png">
     <link rel="stylesheet" href="{{asset('Css/Accueil/app.css')}}">
     <link rel="stylesheet" href="{{asset('Css/Accueil/https://fonts.googleapis.com/icon?family=Material+Icons')}}">
@@ -19,11 +20,31 @@
     <link rel="stylesheet" href="{{asset('Css/Accueil/main.css')}}">
     <link rel="stylesheet" href="{{asset('Css/Accueil/style.deep-purple-800.min.css')}}">
     <link rel="stylesheet" href="{{asset('Css/Accueil/width-boxed.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('Css/Accueil/typewriter.css')}}">
+    <link rel="stylesheet" href="{{asset('Css/Accueil/layers.css')}}">
     </head>
+
+
+
+{{--
+
+    <script src="{{asset('Js/Accueil/app.min.js')}}"></script>
+    {{-- <script src="{{asset('Js/Accueil/google-analytics.js')}}"></script> --}}
+   {{-- <script src="{{asset('Js/Accueil/jquery.min.js')}}"></script>
+   <script src="{{asset('Js/Accueil/perfect-scrollbar.jquery.min.js')}}"></script> --}}
+   {{-- <script src="{{asset('Js/Accueil/index.js')}}"></script> --}}
+    {{-- <script src="{{asset('Js/Accueil/configurator.min.js')}}"></script> --}}
+   {{-- <script src="{{asset('Js/Accueil/theme-punch.revolution.min.js')}}"></script>
+   <script src="{{asset('Js/Accueil/plugins.min.js')}}"></script>
+   <script src="{{asset('Js/Accueil/theme-punch.tools.min.js')}}"></script>  --}}
+
+
 
     <script src=" {{asset('Js/Accueil/plugins.min.js')}}"></script>
     <script src="{{asset('Js/Accueil/app.min.js')}}"></script>
-    <script src="{{asset('Js/Accueil/configurator.min.js')}}"></script>
+    <script src="{{asset('Js/Accueil/typewriter.min.js')}}"></script>
+
     <script>
       (function(i, s, o, g, r, a, m)
       {
@@ -41,6 +62,6 @@
       ga('create', 'UA-90917746-2', 'auto');
       ga('send', 'pageview');
     </script>
-    <script src="{{asset('Js/Accueil/index.js')}}"></script>
+     <script src="{{asset('Js/Accueil/index.js')}}"></script> 
 
 </html>

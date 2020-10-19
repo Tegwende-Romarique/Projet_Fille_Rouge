@@ -1,5 +1,5 @@
-
-.ms-slidebar .ms-slidebar-menu > li > a.collapsed::after {
+/* le main.css est constitue du code css que du ajouté pour perspnnaliser le site */
+/* .ms-slidebar .ms-slidebar-menu > li > a.collapsed::after {
 
     content: '\f067';
     font-family: FontAwesome;
@@ -18,11 +18,9 @@
     content: '\f068';
     transition: all ease .3s;
     font-family: Material-Design-Iconic-Font;
-      
+
 
 }
-
-
 
 
 .ms-slidebar .ms-slidebar-menu > li > a::after {
@@ -32,7 +30,7 @@
   float: right;
   content: '\f077';
   transition: all 0.3s ease 0s;
-  
+
 
 }
 
@@ -59,4 +57,12 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+} */
+
+
+/* le css pour le background image de la page de connexion */
+.ms-hero-img-airplane {
+    background-image: url(/Images/Accueil/arriereplan.jpg);
+    background-size: cover;
+    background-position: center center;
 }

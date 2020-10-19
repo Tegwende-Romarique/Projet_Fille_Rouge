@@ -14,13 +14,17 @@ class CreateEnseignantsTable extends Migration
     public function up()
     {
         Schema::create('enseignants', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
+            $table->timestamps();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('telephone');
+            $table->string('email');
+            $table->Integer('telephone');
+            $table->string('matricule');
 
-            $table->unsignedInteger('etablissement_id');
-            $table->timestamps();
+            $table->unsignedBigInteger('etablissement_id');
+            $table->unsignedBigInteger('classe_id');
+            $table->unsignedBigInteger('role_id');
         });
     }
 

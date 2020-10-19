@@ -14,8 +14,11 @@ class CreateClassesTable extends Migration
     public function up()
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->id();
+            $table->Increments('id');
             $table->timestamps();
+            $table->string('intitule');
+
+            $table->unsignedBigInteger('cycle_Id');
         });
     }
 

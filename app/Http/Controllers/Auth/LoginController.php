@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -38,21 +39,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function login(Request $request){
-        $input= $request->all();
-        $this->validate($request, [
-            'email' =>'required|email',
-            'password' =>'required',
-             
-        ]);
-
-        if(auth()->attempt(array('email'=>$input['email'], 'passwor'=>$input['password'])))
-        {
-            if(auth()->user()->statut == 1){
-                return redirect('/home');
-            } else{
-                return redirect('Etablissement/forme-etablissement');
-            }
+    protected function redirecTo(){
+        if(Auth::user()->role()->pluck('name')->contens('Admin')){
+        return '/home';
+        }elseif (Auth::user()->role()->pluck('name')->contens('Enseignant')){
+            return 'Etablissement/forme-etablissement';
+        }else{
+            return '/';
         }
     }
 }

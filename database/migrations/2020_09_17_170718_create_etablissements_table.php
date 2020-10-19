@@ -18,7 +18,7 @@ class CreateEtablissementsTable extends Migration
             $table->string('nom');
             $table->string('ville');
             $table->string('type');
-           
+
             $table->Integer('user_id')->unsigned();
             $table->timestamps();
         });

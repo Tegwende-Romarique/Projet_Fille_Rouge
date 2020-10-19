@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{asset('Css/Accueil/width-boxed.min.css')}}">
     </head>
     @extends('layouts.Accueil.header')
+    {{-- @yield('name') --}}
 
     <script src=" {{asset('Js/Accueil/plugins.min.js')}}"></script>
     <script src="{{asset('Js/Accueil/app.min.js')}}"></script>
